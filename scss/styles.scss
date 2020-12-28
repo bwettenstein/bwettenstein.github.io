@@ -1,0 +1,84 @@
+@import 'config';
+@import 'utils';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  height: 100vh;
+  line-height: $line-height;
+}
+
+// HEADER
+header {
+  margin-top: 1rem;
+  width: 100%;
+  nav {
+    // .nav-left {
+    // }
+    .nav-right {
+      ul {
+        list-style: none;
+
+        li {
+          a {
+            text-decoration: none;
+            color: $dark-grey;
+            font-weight: $font-weight-med;
+          }
+
+          a:hover {
+            color: $teal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Intro container
+.intro-container {
+  .intro-left {
+    h1 {
+      text-align: start;
+      width: 100%;
+    }
+
+    .img-container {
+      img {
+        height: $profile-height;
+        width: $profile-width;
+        object-fit: fill;
+        overflow: auto;
+        border: solid 1px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  p {
+    width: $med-width;
+    text-align: left;
+  }
+}
+
+// About me
+.about-me {
+  //   width: $med-width;
+  //   width: 800px;
+
+  .img-container {
+    img {
+      height: $profile-height;
+      width: $profile-width;
+      object-fit: fill;
+      overflow: auto;
+      border: solid 1px;
+      border-radius: 50%;
+    }
+  }
+}
