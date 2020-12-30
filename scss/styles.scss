@@ -11,12 +11,14 @@ body {
   font-family: $font-family;
   height: 100vh;
   line-height: $line-height;
+  //   background: #f3f3f3;
+  transition: ease 0.3s;
 }
 
 // HEADER
 header {
   margin-top: 1rem;
-  width: 100%;
+  width: $width-max;
   nav {
     // .nav-left {
     // }
@@ -42,43 +44,118 @@ header {
 
 // Intro container
 .intro-container {
-  .intro-left {
+  .intro-top {
     h1 {
       text-align: start;
-      width: 100%;
+      width: $width-max;
+      font-size: 3rem;
     }
+  }
 
+  .intro-bottom {
     .img-container {
       img {
-        height: $profile-height;
-        width: $profile-width;
+        min-height: $profile-min-height;
+        min-width: $profile-min-width;
+        max-height: $profile-max-height;
+        max-width: $profile-max-width;
+        height: auto;
+        width: auto;
         object-fit: fill;
         overflow: auto;
         border: solid 1px;
         border-radius: 50%;
       }
     }
-  }
+    p {
+      width: $med-width;
+      text-align: left;
+    }
 
-  p {
-    width: $med-width;
-    text-align: left;
+    .text-container {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(60px, 280px));
+        text-align: left;
+        padding-left: 0.75rem;
+      }
+    }
   }
 }
 
-// About me
-.about-me {
-  //   width: $med-width;
-  //   width: 800px;
+// Project container
+.project-container {
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
 
-  .img-container {
-    img {
-      height: $profile-height;
-      width: $profile-width;
-      object-fit: fill;
-      overflow: auto;
-      border: solid 1px;
-      border-radius: 50%;
+    .project-card {
+      max-height: $project-card-height-max;
+      max-width: $project-card-width-max;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      box-shadow: $project-card-box-shadow;
+      transition: top 0.3s ease;
+      position: relative;
+      top: 0;
+
+      .project-img-container {
+        height: 300px;
+        img {
+          height: $height-max;
+          width: $width-max;
+          object-fit: cover;
+        }
+      }
+
+      .project-description-container {
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+
+        .project-info-container {
+          .project-stack-container p {
+            font-weight: $font-weight-light;
+            word-spacing: 1rem;
+          }
+        }
+
+        .project-links-container {
+          width: $width-max;
+          justify-content: flex-start;
+
+          .top-btn,
+          .bot-btn {
+            width: $width-max;
+          }
+
+          a {
+            width: 8rem;
+            text-decoration: none;
+            transition: 0.3s;
+          }
+          .github-button-container {
+            margin-right: 1rem;
+          }
+
+          .demo-button-container {
+            margin-left: 1rem;
+          }
+
+          // Specific styling for The-Blog buttons
+          .blog-btn {
+            width: 13rem;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+
+    .project-card:hover {
+      top: -15px;
     }
   }
 }

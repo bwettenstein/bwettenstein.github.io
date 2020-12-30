@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/utils.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
     <title>Brandon Wettenstein</title>
   </head>
   <body>
@@ -23,10 +28,10 @@
           <div class="nav-right">
             <ul class="flex-center justify-evenly">
               <li class="margin-left-right">
-                <a href="#">About</a>
+                <a href="/#about">About</a>
               </li>
               <li class="margin-left-right">
-                <a href="#">My Work</a>
+                <a href="/#project-container">Projects</a>
               </li>
               <li class="margin-left-right">
                 <a href="#">Contact</a>
@@ -36,50 +41,171 @@
         </nav>
       </header>
 
+      <!-- Begin Intro Container -->
       <div
-        class="intro-container flex-center flex-row justify-center margin-top-bottom"
+        class="intro-container flex-center flex-column justify-center margin-top-bottom"
+        id="about"
       >
-        <div class="intro-left">
+        <div class="intro-top">
           <h1 class="margin-top-bottom padding-top-bottom">Hi, I'm Brandon</h1>
+        </div>
+        <div class="intro-bottom flex-center flex-row">
           <div class="img-container margin-left-right">
             <img
               src="https://avatars2.githubusercontent.com/u/22849268?s=460&u=3c77f3a2cf17765965ea79d6cf8faad73c087d7e&v=4"
               alt="profile-pic"
             />
           </div>
-        </div>
-        <div class="intro-right">
-          <p>
-            I'm a college student with a passion for web development and
-            learning new technologies along the way. I'm currently studying
-            Cognitive Science with a specialization in Human Computer
-            Interaction and Design at UCSD.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur dignissimos, accusantium iste voluptatibus nemo
-            pariatur!
-          </p>
+          <div class="text-container">
+            <p class="margin-top-bottom">
+              I'm a college student with a passion for web development and
+              learning new technologies along the way. I'm currently studying
+              Cognitive Science with a specialization in Human Computer
+              Interaction and Design at UCSD.
+            </p>
+            <p class="margin-top-bottom">
+              Here's what I've recently worked with:
+            </p>
+            <ul class="margin-top-bottom">
+              <li>Javascript</li>
+              <li>Node.js</li>
+              <li>Sass</li>
+              <li>Mongoose</li>
+              <li>Express</li>
+              <li>JWT</li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!-- End Intro Container -->
 
-      <!-- <div class="about-me flex-center flex-row margin-top-bottom">
-        <div class="center-container flex-center">
-          <div class="about-left">
-            <h1 class="margin-top-bottom">About me</h1>
-            <div class="img-container margin-left-right">
+      <!-- Begin Project Container -->
+      <div
+        class="project-container flex-center flex-column"
+        id="project-container"
+      >
+        <h1 class="flex-center justify-center margin-top-bottom">Projects</h1>
+        <div class="projects-container">
+          <!-- BEGIN The Blog -->
+          <div class="project-card the-blog margin-top-bottom">
+            <div class="project-img-container">
               <img
-                src="https://avatars2.githubusercontent.com/u/22849268?s=460&u=3c77f3a2cf17765965ea79d6cf8faad73c087d7e&v=4"
-                alt="profile-pic"
+                src="https://quandel.com/wp-content/uploads/2017/11/600x300.png"
+                alt="backlog-buddy"
+                srcset=""
               />
             </div>
+            <div
+              class="project-description-container flex-center flex-column margin-top-bottom-small"
+            >
+              <div class="project-title-container margin-top-bottom-small">
+                <h1>The Blog</h1>
+              </div>
+              <div class="project-info-container">
+                <div class="project-stack-container">
+                  <p class="margin-top-bottom-small">
+                    Node Mongoose JWT Express
+                  </p>
+                </div>
+                <p class="margin-top-bottom">
+                  Node application that allows users to utilize a backend API in
+                  order to make blog posts that are then shown on the site's
+                  front end site. The front end displays all the blog posts from
+                  MongoDB and allows anyone to make comments on them. The back
+                  end was written in MVC, and uses JWT for route verification.
+                  If users succesfully make a post, their post is saved to
+                  MongoDB, using Mongoose.
+                </p>
+              </div>
+              <div class="project-links-container flex-center flex-column">
+                <div class="top-btn flex-center margin-top-bottom-small">
+                  <div class="github-button-container">
+                    <a
+                      class="blog-btn btn btn-wide flex-center justify-evenly"
+                      href="https://github.com/bwettenstein/the-blog-admin"
+                    >
+                      <i class="fab fa-github"></i> Frontend Github</a
+                    >
+                  </div>
+                  <div class="demo-button-container">
+                    <a
+                      href="https://backlog-buddy.netlify.app/"
+                      class="blog-btn btn flex-center justify-evenly"
+                    >
+                      <i class="fas fa-external-link-alt"></i> Frontend Demo
+                    </a>
+                  </div>
+                </div>
+                <div class="bot-btn flex-center margin-top-bottom-small">
+                  <div class="github-button-container">
+                    <a
+                      class="blog-btn btn btn-wide flex-center justify-evenly"
+                      href="https://github.com/bwettenstein/the-blog-admin"
+                    >
+                      <i class="fab fa-github"></i> Backend Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="margin-left-right">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque vel
-            nemo ab qui sed explicabo.
-          </p>
+          <!-- END The Blog  -->
+          <!-- BEGIN Backlog Buddy  -->
+          <div class="project-card backlog-buddy margin-top-bottom">
+            <div class="project-img-container">
+              <img
+                src="https://quandel.com/wp-content/uploads/2017/11/600x300.png"
+                alt="backlog-buddy"
+                srcset=""
+              />
+            </div>
+            <div
+              class="project-description-container flex-center flex-column margin-top-bottom-small"
+            >
+              <div class="project-title-container margin-top-bottom-small">
+                <h1>Backlog Buddy</h1>
+              </div>
+              <div class="project-info-container">
+                <div class="project-stack-container">
+                  <p class="margin-top-bottom-small">Javascript Sass Webpack</p>
+                </div>
+                <p class="margin-top-bottom">
+                  Javascript application that allows users to keep track of
+                  movies and tv shows they're interested in. Users can search
+                  for movies and tv shows that are fetched from the OMDB Api,
+                  which they can then click on in order to see various info
+                  (director, actor, reviews, etc). Any search result can be
+                  added or removed from a user's watchlist. The different
+                  watchlist and search result methods were mimified and bundled
+                  with Webpack.
+                </p>
+              </div>
+              <div class="project-links-container flex-center">
+                <div class="github-button-container">
+                  <a
+                    class="btn flex-center justify-evenly"
+                    href="https://github.com/bwettenstein/backlog-buddy"
+                  >
+                    <i class="fab fa-github"></i>
+                    Github</a
+                  >
+                </div>
+                <div class="demo-button-container">
+                  <a
+                    href="https://backlog-buddy.netlify.app/"
+                    class="btn flex-center justify-evenly"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Backlog Buddy -->
         </div>
-      </div> -->
+      </div>
+      <!-- End Project Container -->
     </div>
   </body>
 </html>

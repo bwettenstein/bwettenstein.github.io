@@ -6,6 +6,7 @@ $line-height: 1.6;
 $nav-left: 1.5rem;
 $nav-right: 1.2rem;
 
+$font-weight-light: 300;
 $font-weight-med: 600;
 
 // Color vars
@@ -14,7 +15,17 @@ $fb-blue: #3b5998;
 $teal: #008080;
 
 // Element size units
+$width-max: 100%;
+$height-max: 100%;
+
 $med-width: 540px;
 
-$profile-height: 220px;
-$profile-width: 235px;
+$profile-min-height: 220px;
+$profile-min-width: 235px;
+$profile-max-height: 400px;
+$profile-max-width: 415px;
+
+$project-card-height-max: 720px;
+$project-card-width-max: 600px;
+$project-card-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
