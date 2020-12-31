@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/utils.css" />
@@ -35,7 +33,10 @@
                 <a href="/#project-container">Projects</a>
               </li>
               <li class="margin-left-right">
-                <a href="#">Contact</a>
+                <a href="/#contact">Contact</a>
+              </li>
+              <li class="margin-left-right">
+                <a href="#">Resume</a>
               </li>
             </ul>
           </div>
@@ -48,9 +49,8 @@
         id="about"
       >
         <div class="intro-top">
-          <!-- <h1 class="margin-top-bottom padding-top-bottom">Hi, I'm Brandon</h1> -->
           <h1 class="margin-top-bottom padding-top-bottom">
-            ADD TO THE STUDY SPACE README FILE YOU HAVEN'T ADDED ANYTHIG
+            Hi, I'm <span class="name">Brandon</span>
           </h1>
         </div>
         <div class="intro-bottom flex-center flex-row">
@@ -88,7 +88,9 @@
         class="project-container flex-center flex-column"
         id="project-container"
       >
-        <h1 class="flex-center justify-center margin-top-bottom">Projects</h1>
+        <h1 class="title flex-center justify-center margin-top-bottom">
+          Projects
+        </h1>
         <div class="projects-container">
           <!-- BEGIN The Blog -->
           <div class="project-card the-blog margin-top-bottom">
@@ -309,11 +311,14 @@
           <!-- END Study Space-->
         </div>
       </div>
-      <!-- End Project Container -->
+      <!-- END Project Container -->
       <!-- BEGIN Footer -->
-      <footer class="margin-top-bottom flex-center flex-column justify-center">
+      <footer
+        class="margin-top-bottom flex-center flex-column justify-center"
+        id="contact"
+      >
         <div class="footer-title-container">
-          <h1>Contact me</h1>
+          <h1 class="title">Contact me</h1>
         </div>
         <div class="footer-links-container flex-center">
           <div
@@ -338,6 +343,7 @@
           </div>
         </div>
       </footer>
+      <!-- END Footer -->
     </div>
   </body>
 </html>

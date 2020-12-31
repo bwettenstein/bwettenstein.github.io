@@ -13,6 +13,7 @@ body {
   line-height: $line-height;
   background: $light-grey;
   transition: ease 0.3s;
+  scroll-behavior: smooth;
 }
 
 // HEADER
@@ -22,7 +23,6 @@ header {
   top: 0;
   left: 0;
   padding: 1rem 0;
-  z-index: 100;
   width: $width-max;
   transition: background 300ms ease-in-out box-shadow 250ms ease-in-out 0;
   nav {
@@ -199,7 +199,7 @@ footer {
   border: solid 1px $light-grey;
 
   .footer-title-container {
-    width: $width-max;
+    // width: $width-max;
   }
 
   .footer-links-container {
@@ -231,4 +231,13 @@ footer {
       color: $white;
     }
   }
+}
+
+.title,
+.name {
+  border-bottom: solid 5px $fb-blue;
+}
+
+h1 {
+  font-family: $secondary-font-family;
 }
