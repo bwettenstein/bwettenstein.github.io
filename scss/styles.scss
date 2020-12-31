@@ -11,14 +11,20 @@ body {
   font-family: $font-family;
   height: 100vh;
   line-height: $line-height;
-  //   background: #f3f3f3;
+  background: $light-grey;
   transition: ease 0.3s;
 }
 
 // HEADER
 header {
-  margin-top: 1rem;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 1rem 0;
+  z-index: 100;
   width: $width-max;
+  transition: background 300ms ease-in-out box-shadow 250ms ease-in-out 0;
   nav {
     // .nav-left {
     // }
@@ -42,8 +48,23 @@ header {
   }
 }
 
+// Activates when the user starts scrolling
+.nav-scroll {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 0;
+  z-index: 100;
+  width: $width-max;
+  transition: background 350ms ease-in-out box-shadow 300ms ease-in-out 0;
+  background: $white;
+  box-shadow: $navbar-box-shadow;
+}
+
 // Intro container
 .intro-container {
+  padding-top: 2rem;
   .intro-top {
     h1 {
       text-align: start;
@@ -100,6 +121,7 @@ header {
       box-shadow: $project-card-box-shadow;
       transition: top 0.3s ease;
       position: relative;
+      background: $white;
       top: 0;
 
       .project-img-container {
@@ -107,8 +129,19 @@ header {
         img {
           height: $height-max;
           width: $width-max;
+          object-fit: contain;
+        }
+
+        // The Blog img, backlog-buddy-img
+        .the-blog-img,
+        .backlog-buddy-img {
           object-fit: cover;
         }
+
+        // Discord bot img
+        // .discord-bot-img {
+        //   object-fit: contain;
+        // }
       }
 
       .project-description-container {
@@ -156,6 +189,46 @@ header {
 
     .project-card:hover {
       top: -15px;
+    }
+  }
+}
+
+footer {
+  width: $width-max;
+  //   background: $white;
+  border: solid 1px $light-grey;
+
+  .footer-title-container {
+    width: $width-max;
+  }
+
+  .footer-links-container {
+    width: $footer-link-container-width;
+    height: $footer-link-container-height;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  .footer-link {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid $fb-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    a {
+      text-decoration: none;
+      color: $fb-blue;
+      height: $height-max;
+      width: $width-max;
+    }
+  }
+
+  .footer-link:hover {
+    background: $fb-blue;
+    a {
+      color: $white;
     }
   }
 }

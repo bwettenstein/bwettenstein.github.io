@@ -11,8 +11,10 @@ $font-weight-med: 600;
 
 // Color vars
 $dark-grey: #333;
+$light-grey: #f6f7f8;
 $fb-blue: #3b5998;
 $teal: #008080;
+$white: #fff;
 
 // Element size units
 $width-max: 100%;
@@ -20,12 +22,17 @@ $height-max: 100%;
 
 $med-width: 540px;
 
+$navbar-box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+
 $profile-min-height: 220px;
 $profile-min-width: 235px;
 $profile-max-height: 400px;
 $profile-max-width: 415px;
 
-$project-card-height-max: 720px;
+$project-card-height-max: 750px;
 $project-card-width-max: 600px;
 $project-card-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
   0 6px 6px rgba(0, 0, 0, 0.23);
+
+$footer-link-container-width: 8rem;
+$footer-link-container-height: 4rem;

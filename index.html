@@ -16,6 +16,7 @@
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
     ></script>
+    <script defer src="./js/main.js"></script>
     <title>Brandon Wettenstein</title>
   </head>
   <body>
@@ -47,7 +48,10 @@
         id="about"
       >
         <div class="intro-top">
-          <h1 class="margin-top-bottom padding-top-bottom">Hi, I'm Brandon</h1>
+          <!-- <h1 class="margin-top-bottom padding-top-bottom">Hi, I'm Brandon</h1> -->
+          <h1 class="margin-top-bottom padding-top-bottom">
+            ADD TO THE STUDY SPACE README FILE YOU HAVEN'T ADDED ANYTHIG
+          </h1>
         </div>
         <div class="intro-bottom flex-center flex-row">
           <div class="img-container margin-left-right">
@@ -90,7 +94,8 @@
           <div class="project-card the-blog margin-top-bottom">
             <div class="project-img-container">
               <img
-                src="https://quandel.com/wp-content/uploads/2017/11/600x300.png"
+                class="the-blog-img"
+                src="./img/the-blog.png"
                 alt="backlog-buddy"
                 srcset=""
               />
@@ -104,17 +109,17 @@
               <div class="project-info-container">
                 <div class="project-stack-container">
                   <p class="margin-top-bottom-small">
-                    Node Mongoose JWT Express
+                    Node Mongoose Express JWT
                   </p>
                 </div>
                 <p class="margin-top-bottom">
-                  Node application that allows users to utilize a backend API in
-                  order to make blog posts that are then shown on the site's
-                  front end site. The front end displays all the blog posts from
-                  MongoDB and allows anyone to make comments on them. The back
-                  end was written in MVC, and uses JWT for route verification.
-                  If users succesfully make a post, their post is saved to
-                  MongoDB, using Mongoose.
+                  A node application that allows users to utilize a backend API
+                  in order to make blog posts that are then shown on the site's
+                  front end site. The front end uses mongoose to display all the
+                  blog posts from MongoDB, and allows anyone to make comments on
+                  them. The back end was written with MVC design, and uses JWT
+                  for route authentucation. If users succesfully make a post,
+                  their post is saved to MongoDB, using Mongoose.
                 </p>
               </div>
               <div class="project-links-container flex-center flex-column">
@@ -129,7 +134,7 @@
                   </div>
                   <div class="demo-button-container">
                     <a
-                      href="https://backlog-buddy.netlify.app/"
+                      href="https://stark-castle-08736.herokuapp.com/"
                       class="blog-btn btn flex-center justify-evenly"
                     >
                       <i class="fas fa-external-link-alt"></i> Frontend Demo
@@ -150,11 +155,13 @@
             </div>
           </div>
           <!-- END The Blog  -->
+
           <!-- BEGIN Backlog Buddy  -->
           <div class="project-card backlog-buddy margin-top-bottom">
             <div class="project-img-container">
               <img
-                src="https://quandel.com/wp-content/uploads/2017/11/600x300.png"
+                class="backlog-buddy-img"
+                src="./img/backlog-buddy.png"
                 alt="backlog-buddy"
                 srcset=""
               />
@@ -203,9 +210,134 @@
             </div>
           </div>
           <!-- END Backlog Buddy -->
+
+          <!-- BEGIN Sccl-Discord-Bot -->
+          <div class="project-card discord-bot margin-top-bottom">
+            <div class="project-img-container">
+              <img
+                class="discord-bot-img"
+                src="./img/discord-bot.png"
+                alt="backlog-buddy"
+              />
+            </div>
+            <div
+              class="project-description-container flex-center flex-column margin-top-bottom-small"
+            >
+              <div class="project-title-container margin-top-bottom-small">
+                <h1>SCCL Discord Bot</h1>
+              </div>
+              <div class="project-info-container">
+                <div class="project-stack-container">
+                  <p class="margin-top-bottom-small">
+                    Node Puppeteer Discord.js
+                  </p>
+                </div>
+                <p class="margin-top-bottom">
+                  A node application that lets users browse the SCCL.org library
+                  website, while in Discord. The app uses puppeteer to scrape
+                  the site and simulate clicks by the user. It searches the SCCL
+                  website for the user provided search query and returns a list
+                  of matches. Each search result displays basic info (title,
+                  author, availability) and users can get the specific link of
+                  the search result in order to get more information.
+                </p>
+              </div>
+              <div class="project-links-container flex-center">
+                <div class="github-button-container">
+                  <a
+                    class="btn flex-center justify-evenly"
+                    href="https://github.com/bwettenstein/discord-sccl-bot"
+                  >
+                    <i class="fab fa-github"></i>
+                    Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Sccl=Discord-Bot -->
+          <!-- BEGIN Study Space-->
+          <div class="project-card discord-bot margin-top-bottom">
+            <div class="project-img-container">
+              <img
+                class="discord-bot-img"
+                src="./img/study-space.png"
+                alt="backlog-buddy"
+              />
+            </div>
+            <div
+              class="project-description-container flex-center flex-column margin-top-bottom-small"
+            >
+              <div class="project-title-container margin-top-bottom-small">
+                <h1>Study Space</h1>
+              </div>
+              <div class="project-info-container">
+                <div class="project-stack-container">
+                  <p class="margin-top-bottom-small">Javascript Webpack</p>
+                </div>
+                <p class="margin-top-bottom">
+                  A javascript application centered on productivity that
+                  emulates the popular Chrome extension, Momentum. It has an
+                  embedded Youtube video of 24/7 lofi music and has a task list.
+                  Users can add or remove different tasks, while remaining on
+                  the page and listening to music. Webpack was used to bundle
+                  the code and the Unsplash API was used to generate random
+                  images each time the app was loaded.
+                </p>
+              </div>
+              <div class="project-links-container flex-center">
+                <div class="github-button-container">
+                  <a
+                    class="btn flex-center justify-evenly"
+                    href="https://github.com/bwettenstein/study-space"
+                  >
+                    <i class="fab fa-github"></i>
+                    Github</a
+                  >
+                </div>
+                <div class="demo-button-container">
+                  <a
+                    href="https://bwettenstein.github.io/study-space/"
+                    class="btn flex-center justify-evenly"
+                  >
+                    <i class="fas fa-external-link-alt"></i>Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Study Space-->
         </div>
       </div>
       <!-- End Project Container -->
+      <!-- BEGIN Footer -->
+      <footer class="margin-top-bottom flex-center flex-column justify-center">
+        <div class="footer-title-container">
+          <h1>Contact me</h1>
+        </div>
+        <div class="footer-links-container flex-center">
+          <div
+            class="email-icon-container footer-link flex-center justify-center"
+          >
+            <a
+              class="flex-center justify-center"
+              href="mailto:bwettens@ucsd.edu"
+            >
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
+          <div
+            class="github-icon-container footer-link flex-center justify-center"
+          >
+            <a
+              class="flex-center justify-center"
+              href="https://github.com/bwettenstein/"
+            >
+              <i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
