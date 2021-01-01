@@ -27,6 +27,7 @@ header {
   transition: background 300ms ease-in-out box-shadow 250ms ease-in-out 0;
   nav {
     // .nav-left {
+    //   position: relative;
     // }
     .nav-right {
       ul {
@@ -242,11 +243,34 @@ h1 {
   font-family: $secondary-font-family;
 }
 
+// Used for media queries
+
 // Media queries
 @media (max-width: 990px) {
+  header {
+    display: none;
+    nav {
+      .nav-left {
+        text-align: center;
+        width: $width-max;
+
+        h1 {
+          text-align: center;
+        }
+      }
+      .nav-right {
+        display: none;
+      }
+    }
+  }
   // Intro container scaling
   .intro-container {
-    padding-top: 5rem;
+    padding-top: 1rem;
+
+    .intro-top h1 {
+      font-size: 2.5rem;
+    }
+
     .intro-bottom {
       flex-direction: column;
 
