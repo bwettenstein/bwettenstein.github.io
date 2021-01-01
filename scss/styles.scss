@@ -241,3 +241,115 @@ footer {
 h1 {
   font-family: $secondary-font-family;
 }
+
+// Media queries
+@media (max-width: 990px) {
+  // Intro container scaling
+  .intro-container {
+    padding-top: 5rem;
+    .intro-bottom {
+      flex-direction: column;
+
+      .img-container {
+        img {
+          height: $media-img-height-width;
+          width: $media-img-height-width;
+        }
+      }
+
+      .text-container {
+        flex-direction: column;
+        width: 300px;
+        font-size: 1.25rem;
+
+        p {
+          width: 100%;
+          text-align: center;
+        }
+
+        ul {
+          grid-template-columns: 1fr;
+          text-align: center;
+          list-style: none;
+        }
+
+        li {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // Project container
+  .project-container {
+    .projects-container {
+      grid-template-columns: 1fr;
+      //   width: $media-img-height-width;
+
+      .project-card {
+        max-height: unset;
+        max-width: unset;
+        min-width: $media-project-card-min-width;
+        width: auto;
+        max-width: $media-project-card-max-width;
+        align-items: center;
+
+        .project-title-container {
+          width: $width-max;
+          text-align: center;
+        }
+
+        .project-stack-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+        }
+
+        .project-links-container {
+          .btn {
+            height: $media-btn-height;
+          }
+          .top-btn {
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+
+            .github-button-container {
+              margin: 1rem 0;
+            }
+            .demo-button-container {
+              margin: 0;
+            }
+
+            .github-button-container a,
+            .demo-button-container a {
+              height: $media-btn-height;
+            }
+          }
+
+          .bot-btn {
+            .github-button-container a {
+              height: $media-btn-height;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    .footer-title-container {
+      margin-bottom: 1rem;
+    }
+    .footer-links-container {
+      width: 11rem;
+
+      .footer-link {
+        width: $media-footer-link-height-width;
+        height: $media-footer-link-height-width;
+      }
+    }
+  }
+}
